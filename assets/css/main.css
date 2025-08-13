@@ -27658,12 +27658,17 @@ Location:
   }
 }
 .slider-section-area .slider-images-area .img1 img {
-  height: 120px;
-  width: 220px;
+  height: 100%;
+  width: 100%;
   /* -o-object-fit: contain;
      object-fit: contain; */
 }
-
+.slider-section-area .slider-images-area .img2 img {
+  height:100px;
+  width:100%;
+  /* -o-object-fit: contain;
+     object-fit: contain; */
+}
 .testimonial1-section-area {
   position: relative;
   z-index: 1;
