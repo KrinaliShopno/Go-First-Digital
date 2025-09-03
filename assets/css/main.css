@@ -15292,7 +15292,7 @@ Location:
 }
 .homepage1-body .header-area.homepage1 .header-elements .main-menu ul li a {
   font-family: var(--ztc-family-font1);
-  font-size: var(--ztc-font-size-font-s18);
+  font-size: 20px;
   font-weight: var(--ztc-weight-medium);
   color: var(--ztc-text-text-2);
   display: inline-block;
