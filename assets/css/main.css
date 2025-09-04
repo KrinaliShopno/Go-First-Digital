@@ -31690,5 +31690,90 @@ Location:
 .blue-img {
    filter: brightness(0) saturate(100%) invert(19%) sepia(80%) saturate(739%) hue-rotate(230deg) brightness(95%) contrast(92%);
 }
+.card{
+    background: #57c2b217;
+    border: 1px solid #d8d8d8;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,.04);
+    margin-top: 20px;
+  }
 
+  .tablewrap{overflow:auto}
+  table{width:100%;border-collapse:separate;border-spacing:0}
+
+  thead th{
+    background:#57c2b2;
+    padding:12px 14px;
+    font-weight:700;
+    text-align:left;
+    border-bottom:1px solid var(--border);
+    white-space:nowrap;
+  }
+  /* outer borders */
+  table th:first-child, table td:first-child{border-left:1px solid var(--border)}
+  table th:last-child,  table td:last-child {border-right:1px solid var(--border)}
+  tbody td{border-bottom:1px solid var(--border);padding:12px 14px;vertical-align:middle}
+
+  /* zebra rows */
+  tbody tr:nth-child(odd){background:var(--rowA)}
+  tbody tr:nth-child(even){background:var(--rowB)}
+
+  /* currency / numbers */
+  .mono{font-variant-numeric:tabular-nums}
+  .amount{font-weight:800}
+
+  /* compact toggle (pure CSS) */
+  .switch{
+    --w:42px; --h:22px; --p:3px;
+    position:relative;width:var(--w);height:var(--h);display:inline-block;
+  }
+  .switch input{appearance:none;width:0;height:0;opacity:0}
+  .track{
+    position:absolute;inset:0;background:#cfd6e0;border:1px solid #c6ceda;border-radius:999px;transition:.2s ease;
+  }
+  .thumb{
+    position:absolute;top:var(--p);left:var(--p);
+    width:calc(var(--h) - var(--p)*2);height:calc(var(--h) - var(--p)*2);
+    background:#fff;border-radius:999px;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:.2s ease;
+  }
+  .switch input:checked ~ .track{background: #57c2b2;
+    border-color: #57c2b2;}
+  .switch input:checked ~ .thumb{transform:translateX(calc(var(--w) - var(--h)))}
+
+  /* small helpers */
+  .right{text-align:right}
 /*============= CASE STUDY CSS AREA ENDS ===============*//*# sourceMappingURL=main.css.map */
+  /* Tabs Styling */
+  .nav-tabs .nav-link {
+    background: #fff;
+    border: none;
+    color: #000;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  .nav-tabs .nav-link:hover {
+    background: #57c2b2;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  .nav-tabs .nav-link.active {
+    background: #57c2b2;
+    color: #fff;
+  }
+
+  /* Image Styling */
+  .tab-img {
+    max-width: 700px;
+    border-radius: 15px;
+    margin: 20px auto;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.6s ease-in-out;
+  }
+
+  /* Fade-in animation when active */
+  .tab-pane.show.active .tab-img {
+    opacity: 1;
+    transform: scale(1);
+  }
