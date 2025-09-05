@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="assets/css/plugins/slick-slider.css">
   <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
   <link rel="stylesheet" href="assets/css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <!--=====  JS SCRIPT LINK =======-->
   <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
@@ -959,49 +960,60 @@
               <h3>Get In Touch</h3>
               <p>We're here to help! If you have any questions or would like to discuss <br class="d-lg-block d-none">
                 how our SEO and digital marketing services can benefit your business,</p>
-              <form action="https://api.web3forms.com/submit" method="POST">
+              <form id="contact-form2">
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="input-area">
-                      <input type="text" placeholder="First Name" required>
+                      <!-- <input type="text" placeholder="First Name" required> -->
+                      <input type="text" placeholder="First Name" name="first_name" id="first_name">
+                    <small class="error-msg" style="color:red;display:none;">First Name is required</small>
+                    </div>
+                    
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <!-- <input type="text" placeholder="Last Name" required> -->
+                      <input type="text" placeholder="Last Name" name="last_name" id="last_name">
+                    <small class="error-msg" style="color:red;display:none;">Last Name is required</small>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="input-area">
-                      <input type="text" placeholder="Last Name" required>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="input-area">
-                      <input type="email" placeholder="Email Address" required>
+                      <!-- <input type="email" placeholder="Email Address" required> -->
+                        <input type="email" placeholder="Email Address" name="email" id="email">
+                    <small class="error-msg" style="color:red;display:none;">Valid Email is required</small>
                     </div>
                   </div>
 
                   <div class="col-lg-6">
                     <div class="input-area">
-                      <input type="number" placeholder="Phone Number" required>
+                      <!-- <input type="number" placeholder="Phone Number" required> -->
+                        <input type="number" placeholder="Phone Number" name="phone" id="phone">
+                    <small class="error-msg" style="color:red;display:none;">Phone Number is required</small>
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="input-area">
-                      <select name="country" id="country" class="country-area nice-select6">
+                      <select name="services" id="services" class="country-area nice-select6">
                         <option value="1" data-display="Service Type">Service Type</option>
-                        <option value="">Belgium</option>
-                        <option value="">Brezil</option>
-                        <option value="">Argentina</option>
-                        <option value="">Bangladesh</option>
-                        <option value="">Germany</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Brezil">Brezil</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Germany">Germany</option>
                       </select>
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="input-area">
-                      <textarea placeholder="Your Message" required></textarea>
+                      <!-- <textarea placeholder="Your Message" required></textarea> -->
+                       <textarea placeholder="Your Message" name="message" id="message"></textarea>
+                    <small class="error-msg" style="color:red;display:none;">Message is required</small>
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="input-area">
-                      <button class="header-btn1">Free Consultation <span><i
+                      <button class="header-btn1" type="submit">Free Consultation <span><i
                             class="fa-solid fa-arrow-right"></i></span></button>
                     </div>
                   </div>
@@ -1141,6 +1153,22 @@
   <script src="assets/js/plugins/circle-progress.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
+    // Initialize EmailJS (replace with your Public Key)
+    emailjs.init("c8M_qh3t1MOScLms-");
+
+    document.getElementById("contact-form2").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_iogh7f7", "template_vkiyycb", this)
+        .then(() => {
+          alert("Inquery Send Successfully!");
+          this.reset();
+        }, (error) => {
+          alert("❌ Failed to send email. Error: " + JSON.stringify(error));
+        });
+    });
+  </script>
+  <script>
     function setEqualHeightTestimonials() {
       let maxHeight = 0;
       const boxes = document.querySelectorAll('.testimonial-author-box');
@@ -1175,7 +1203,60 @@
       setTimeout(setEqualHeightTestimonials, 100);
     });
   </script>
+<script>
+    document.getElementById("contact-form2").addEventListener("submit", function (e) {
+      e.preventDefault();
 
+      let isValid = true;
+
+      // Clear previous errors
+      document.querySelectorAll(".error-msg").forEach(el => el.style.display = "none");
+
+      // Validate fields
+      const firstName = document.getElementById("first_name");
+      const lastName = document.getElementById("last_name");
+      const email = document.getElementById("email");
+      const phone = document.getElementById("phone");
+      const message = document.getElementById("message");
+
+      if (firstName.value.trim() === "") {
+        firstName.nextElementSibling.style.display = "block";
+        isValid = false;
+      }
+
+      if (lastName.value.trim() === "") {
+        lastName.nextElementSibling.style.display = "block";
+        isValid = false;
+      }
+
+      if (email.value.trim() === "" || !/^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(email.value)) {
+        email.nextElementSibling.style.display = "block";
+        isValid = false;
+      }
+
+      if (phone.value.trim() === "") {
+        phone.nextElementSibling.style.display = "block";
+        isValid = false;
+      }
+
+      if (message.value.trim() === "") {
+        message.nextElementSibling.style.display = "block";
+        isValid = false;
+      }
+
+      // If valid → send EmailJS
+      if (isValid) {
+        emailjs.sendForm("service_iogh7f7", "template_byry306", this)
+          .then(() => {
+            alert("✅ Inquiry Sent Successfully!");
+            this.reset();
+          })
+          .catch((error) => {
+            alert("❌ Failed to send email. Error: " + JSON.stringify(error));
+          });
+      }
+    });
+  </script>
 </body>
 
 <!-- Mirrored from seoc-html-v2.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 May 2025 03:46:36 GMT -->
