@@ -188,44 +188,189 @@
 </head>
 
 <body class="homepage1-body">
+ <!--===== PRELOADER STARTS =======-->
+  <div class="preloader">
+    <div class="loading-container">
+      <div class="loading"></div>
+      <div id="loading-icon"><img src="assets/img/all-images/digital_1.png" alt=""></div>
+    </div>
+  </div>
+  <!--===== PRELOADER ENDS =======-->
 
-  <!-- ======= Header: reuse your existing header markup on your page ======= -->
-  <header class="border-0">
-    <div class="header-area homepage1 header header-sticky d-none d-lg-block" id="header">
+  <!--===== PROGRESS STARTS=======-->
+  <div class="paginacontainer">
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+  </div>
+  <!--===== PROGRESS ENDS=======-->
+
+  <!--=====HEADER START=======-->
+  <header>
+    <div class="header-area homepage1 header header-sticky d-none d-xl-block " id="header">
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-lg-12">
             <div class="header-elements">
-              <div class="site-logo"><a href="index.html"><img src="assets/img/all-images/Digital_2.png" width="190"
-                    height="80" alt="Go First Digital" /></a></div>
+              <div class="site-logo">
+                <a href="index.html"><img src="assets/img/all-images/Digital_2.png" alt="" width="190px"
+                    height="80px"></a>
+              </div>
               <div class="main-menu">
                 <ul>
-                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="/index.html">Home </a> </li>
                   <li><a href="about.html">About</a></li>
-                  <li><a href="service.html">Services</a></li>
-                  <li><a href="blog.html">Blogs</a></li>
-                  <li><a href="Protfolio.html">Portfolio</a></li>
+                  <li><a href="service.html">Services </a></li>
+                  <li><a href="blog.html">Blogs </a></li>
+                  <li><a href="Protfolio.html">Protfolio </a></li>
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
               <div class="btn-area">
-                <a class="header-btn1" href="contact.html">Free Consultation <span><i
+                <div class="search-icon header__search header-search-btn">
+                  <a href="#"><img src="assets/img/icons/search11.png" alt="" width="30px" height="30px"></a>
+                </div>
+                <a href="contact.html" class="header-btn1">Free Consultation <span><i
                       class="fa-solid fa-arrow-right"></i></span></a>
               </div>
+
+              <div class="header-search-form-wrapper">
+                <div class="tx-search-close tx-close"><i class="fa-solid fa-xmark"></i></div>
+                <div class="header-search-container">
+                  <form role="search" class="search-form">
+                    <input type="search" class="search-field" placeholder="Search …" value="" name="s">
+                    <button type="submit" class="search-submit"><img src="assets/img/icons/search-icons1.svg"
+                        alt=""></button>
+                  </form>
+                </div>
+              </div>
+              <div class="body-overlay"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </header>
-  <!-- Mobile header from your project can also be reused -->
+  <!--=====HEADER END =======-->
+
+  <!--===== MOBILE HEADER STARTS =======-->
+  <div class="mobile-header mobile-haeder1 d-block d-xl-none">
+    <div class="container-fluid">
+      <div class="col-12">
+        <div class="mobile-header-elements">
+          <div class="mobile-logo">
+            <a href="/index.html"><img src="assets/img/all-images/Digital_2.png" alt="" width="150px" height="60px"></a>
+          </div>
+          <div class="mobile-nav-icon dots-menu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-sidebar mobile-sidebar1">
+    <div class="logosicon-area">
+      <div class="logos">
+        <img src="assets/img/all-images/Digital_2.png" alt="" width="150px" height="60px">
+      </div>
+      <div class="menu-close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="mobile-nav mobile-nav1">
+      <ul class="mobile-nav-list nav-list1">
+        <li><a href="/index.html">Home </a>
+          <!-- <ul class="sub-menu">
+          <li>
+            <a href="#">Multiple Page</a>
+            <ul class="sub-menu">
+              <li><a href="index-2.html">Home One</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Landing Page</a>
+            <ul class="sub-menu">
+              <li><a href="single-index1.html" target="_blank">Home One</a></li>
+            </ul>
+          </li>
+        </ul> -->
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a>
+        </li>
+        <li><a href="blog.html">Blogs</a>
+        </li>
+        <li><a href="Protfolio.html">Protfolio </a></li>
+        <li><a href="testimonials.html">Testimonials </a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+
+      <div class="allmobilesection">
+        <a href="contact.html" class="header-btn1">Get Started <span><i class="fa-solid fa-arrow-right"></i></span></a>
+        <div class="single-footer">
+          <h3>Contact Info</h3>
+          <div class="footer1-contact-info">
+            <div class="contact-info-single">
+              <div class="contact-info-icon">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="contact-info-text">
+                <a href="tel:+91 9638092181">+91 9638092181</a>
+              </div>
+            </div>
+
+            <div class="contact-info-single">
+              <div class="contact-info-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-info-text">
+                <a href="mailto:digitalgofirst@gmail.com">digitalgofirst@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="single-footer mt-4">
+              <h3>Our Location</h3>
+
+              <div class="contact-info-single">
+                <div class="contact-info-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-info-text">
+                  <a href="https://maps.app.goo.gl/e95bcsv2NRC73E9a6">2055, 2nd Floor , Vanaziano complex,
+                    Udhana-Magdalla
+                    road, Vesu Surat-395007</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="single-footer mt-4">
+              <h3>Social Links</h3>
+
+              <div class="social-links-mobile-menu">
+                <ul>
+                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== MOBILE HEADER STARTS =======-->
 
   <!-- ======= Hero ======= -->
   <section class="section">
     <div class="container">
       <div class="row g-4 align-items-center gradient-card rounded-2xl shadow-soft">
         <div class="col-lg-6">
-          <div class="" style="padding: 0px 60px 0px 45px;">
+          <div class="protfolio_Details">
             <span class="kicker"><img src="assets/img/all-images/person-CqOZwXV1.png" width="28" height="28" alt="" />
               Hello, I’m</span>
             <h1 class="display-5 fw-bold mt-2 mb-3">Prakash Parghi</h1>
@@ -245,7 +390,7 @@
         <div class="col-lg-6 text-center">
           <img class="img-fluid rounded-2xl" src="assets/img/all-images/person-CqOZwXV1.png" alt="Designer portrait" />
         </div>
-        <div class="col-lg-12" style="padding: 0px 55px 38px 55px;">
+        <div class="col-lg-12 protfoli_lead" style="">
           <p class="lead mb-4">At Go First Digital, our vision is to provide businesses with impactful digital solutions
             that not only increase visibility but also generate high-quality leads, boost conversions, and ensure
             sustainable growth.</p>
@@ -313,31 +458,31 @@
           </p>
       </div>
       <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-xl-3 col-md-6 col-lg-4">
           <div class="">
-            <div class="badge-pill mb-3">Social Media Management</div>
+            <div class="badge-pill">Social Media Management</div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-xl-3 col-md-6 col-lg-4">
           <div class="">
-            <div class="badge-pill mb-3">Performance marketing
+            <div class="badge-pill">Performance marketing
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-xl-3 col-md-6 col-lg-4">
           <div class="">
-            <div class="badge-pill mb-3">Website Development
+            <div class="badge-pill">Website Development
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-2">
+        <div class="col-12 col-xl-2 col-md-6 col-lg-4">
           <div class="">
-            <div class="badge-pill mb-3">Branding</div>
+            <div class="badge-pill">Branding</div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-1">
+        <div class="col-12 col-xl-1 col-md-6 col-lg-4">
           <div class="">
-            <div class="badge-pill mb-3">SEO</div>
+            <div class="badge-pill">SEO</div>
           </div>
         </div>
       </div>
