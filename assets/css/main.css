@@ -2949,7 +2949,7 @@ Location:
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 100px 100px 100px 100px;
+  border-radius: 500px;
 }
 .about1-section-area .about-images .star1 {
   height: 78px;
@@ -3014,7 +3014,7 @@ Location:
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 100px;
+  border-radius: 500px;
 }
 .about1-section-area .about-auhtor-images .elements5 {
   width: 205px;
@@ -20584,7 +20584,7 @@ Location:
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 100px;
+  border-radius: 500px;
 }
 .works-inner-section-area .about-all-images-area .img2 img {
   height: 100%;
