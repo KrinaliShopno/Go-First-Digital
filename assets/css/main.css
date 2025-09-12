@@ -22681,14 +22681,14 @@ Location:
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 100px;
+  border-radius: 500px;
 }
 .history-inner-section-area .about-all-images-area .img2 img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 100px;
+  border-radius: 500px;
 }
 .history-inner-section-area .history-content-area {
   padding: 0 0 0 50px;
@@ -23037,6 +23037,21 @@ Location:
   font-style: normal;
   font-weight: var(--ztc-weight-semibold);
   line-height: 24px;
+}
+
+@media (max-width:425px) {
+  .choose-section-area .accordian-tabs-area .accordion .accordion-item h2 button {
+    box-shadow: none;
+    background: var(--ztc-text-text-1);
+    transition: all 0.4s;
+    border-radius: 7px;
+    color: var(--ztc-text-text-2);
+    font-family: var(--ztc-family-font1);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: var(--ztc-weight-semibold);
+    line-height: 24px;
+}
 }
 .choose-section-area .accordian-tabs-area .accordion .accordion-item h2 button::after {
   content: "\f061";
