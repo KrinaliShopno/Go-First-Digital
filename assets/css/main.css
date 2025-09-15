@@ -2938,7 +2938,7 @@ Location:
 /*============= ABOUT CSS AREA ===============*/
 .about1-section-area {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   background-color: #57c2b212;
 }
 .about1-section-area .about-images {
@@ -2996,7 +2996,7 @@ Location:
 }
 .about1-section-area .about-auhtor-images {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   top: 160px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -9671,7 +9671,7 @@ Location:
 /*============= BLOG CSS AREA ===============*/
 .blog1-scetion-area {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   padding: 50px 0px;
 }
 .blog1-scetion-area .blog-hedaer-area {
@@ -9692,8 +9692,9 @@ Location:
 .blog1-scetion-area .blog-author-boxarea {
   background: var(--ztc-text-text-1);
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   border-radius: 4px;
+      border: 1px solid #80808040;
 }
 .blog1-scetion-area .blog-author-boxarea:hover .img1::after {
   height: 100%;
@@ -10570,7 +10571,7 @@ Location:
   line-height: 16px;
   transition: all 0.4s;
   border-radius: 20px;
-  background: rgba(78, 47, 218, 0.1);
+  background: #57c2b240;
   padding: 12px 16px;
   margin: 0 10px 0 0;
 }
@@ -10609,16 +10610,16 @@ Location:
   border-radius: 50%;
   display: inline-block;
   transition: all 0.4s;
-  background: #DBE2F0;
+  /* background: #57c2b240; */
   margin: 0 10px 0 0;
 }
 .blog-auhtor-section-area .blog-auhtor-sidebar-area .social-tags .social ul li a:hover {
-  background: var(--ztc-text-text-4);
+  /* background: var(--ztc-text-text-4); */
   transition: all 0.4s;
   transform: translateY(-3px);
 }
 .blog-auhtor-section-area .blog-auhtor-sidebar-area .social-tags .social ul li a:hover img {
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
   transition: all 0.4s;
 }
 .blog-auhtor-section-area .blog-auhtor-sidebar-area .social-tags .social ul li a img {
@@ -10698,7 +10699,7 @@ Location:
 }
 .blog-auhtor-section-area .blog-auhtor-sidebar-area .comments-boxarea {
   border-radius: 7px;
-  background: rgba(78, 47, 218, 0.05);
+  background: #57c2b212;
   position: relative;
   padding: 24px;
 }
@@ -20477,7 +20478,7 @@ Location:
 
 .works-inner-section-area {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
 }
 .works-inner-section-area .works-header-area.specing2 {
   padding: 0 0 0 30px;
@@ -22634,7 +22635,7 @@ Location:
 /*============= HISTORY CSS AREA ENDS ===============*/
 .history-inner-section-area {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   padding: 100px 0 70px 0;
 }
 @media (max-width: 767px) {
@@ -22780,7 +22781,7 @@ Location:
 /*============= SKILLS CSS AREA  ===============*/
 .skills-section-area {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   background: var(--ztc-text-text-2);
 }
 .skills-section-area .cta-bg1 {
@@ -22937,7 +22938,7 @@ Location:
 /*============= CHOOSE CSS AREA STARTS ===============*/
 .choose-section-area {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   background: var(--ztc-text-text-2);
 }
 .choose-section-area .cta-bg1 {
@@ -26294,7 +26295,7 @@ Location:
 /*============= CTA CSS AREA ===============*/
 .cta-section-area {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   background: #57c2b2;
 }
 @media (max-width: 767px) {
@@ -27672,7 +27673,7 @@ Location:
 /*============= TESTIMONIAL CSS AREA ===============*/
 .slider-section-area {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   background: var(--ztc-bg-bg-4);
 }
 .slider-section-area .sldier-head p {
