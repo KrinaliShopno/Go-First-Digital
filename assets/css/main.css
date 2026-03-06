@@ -2961,7 +2961,7 @@ Location:
 }
 .about1-section-area .about-content-area {
   position: relative;
-  padding: 0 50px;
+  padding: 0 20px;
 }
 .about1-section-area .about-content-area .arrow-circle {
   background: #E4E0F9;
@@ -25667,6 +25667,7 @@ Location:
   margin-bottom: 30px;
   transition: all 0.4s;
   text-align: center;
+  height: 255px;
 }
 .location-section-area .location-boxes:hover {
   transform: translateY(-5px);
@@ -25743,6 +25744,16 @@ Location:
   .contact11-section-area .contact-boxarea {
     margin-bottom: 30px;
   }
+  .location-section-area .location-boxes {
+    background: var(--ztc-text-text-1);
+    position: relative;
+    padding: 32px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    transition: all 0.4s;
+    text-align: center;
+    height: 310px;
+} 
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .contact11-section-area .contact-boxarea {
@@ -31892,7 +31903,7 @@ font-size: 75px;
 }
 
 .container{
-  width:85%;
+  width:95%;
   margin:auto;
 }
 
