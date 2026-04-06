@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Go First Digital – Portfolio Home</title>
-        <!--=====FAB ICON=======-->
- <link rel="shortcut icon" href="assets/img/all-images/short_icon.png" type="image/x-icon">
+  <!--=====FAB ICON=======-->
+  <link rel="shortcut icon" href="assets/img/all-images/short_icon.png" type="image/x-icon">
 
   <!-- Existing vendor styles from your project -->
   <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
@@ -18,8 +18,8 @@
   <link rel="stylesheet" href="assets/css/plugins/slick-slider.css" />
   <link rel="stylesheet" href="assets/css/plugins/nice-select.css" />
   <link rel="stylesheet" href="assets/css/main.css" />
-    <!--=====  JS SCRIPT LINK =======-->
-    <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
+  <!--=====  JS SCRIPT LINK =======-->
+  <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
   <!-- Lightweight page styles layered on top of your main.css -->
   <style id="portfolio-page-styles">
     :root {
@@ -182,6 +182,106 @@
       border: 1px solid #f0eff8
     }
 
+    /* NORMAL SECTIONS */
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.premium-carousel {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  background: #000; /* Dark base for premium feel */
+}
+
+.carousel-track {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Ultra Smooth Cubic Bezier */
+  transition: transform 1.2s cubic-bezier(0.83, 0, 0.17, 1);
+  will-change: transform;
+}
+
+.slide {
+  height: 100vh;
+  width: 100vw;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Full Width mate cover jaruri che */
+  display: block;
+  transition: transform 1.8s ease; /* Slow zoom effect */
+  transform: scale(1.1); /* Default thodi zoom rakhvi */
+}
+
+/* Jyare slide active thay tyare image zoom-out thase (Premium Look) */
+.slide.active img {
+  transform: scale(1);
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+}
+
+/* --- MODERN DOTS --- */
+.dots-nav {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border: 2px solid transparent;
+}
+
+.dot.active {
+  background: #fff;
+  transform: scale(1.5);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @media (max-width:991.98px) {
       .section {
         padding: 56px 0
@@ -191,7 +291,7 @@
 </head>
 
 <body class="homepage1-body">
- <!--===== PRELOADER STARTS =======-->
+  <!--===== PRELOADER STARTS =======-->
   <div class="preloader">
     <div class="loading-container">
       <div class="loading"></div>
@@ -224,13 +324,13 @@
               <div class="main-menu">
                 <ul>
                   <li><a href="/index.html">Home </a> </li>
-                          <li><a href="about.html">About <i class="fa-solid fa-angle-down"></i></a>
+                  <li><a href="about.html">About <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="dropdown-padding">
                       <li><a href="#">Awards & Recognition
                         </a></li>
                     </ul>
                   </li>
-                                    <li><a href="service.html">Services <i class="fa-solid fa-angle-down"></i></a>
+                  <li><a href="service.html">Services <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="dropdown-padding">
                       <li><a href="#">Social Media Marketing</a></li>
                       <li><a href="#">Website Development</a></li>
@@ -316,12 +416,12 @@
           </li>
         </ul> -->
         </li>
-                <li><a href="about.html">About <i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-padding">
-                      <li><a href="#">Awards & Recognition
-                        </a></li>
-                    </ul>
-                  </li>
+        <li><a href="about.html">About <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-padding">
+            <li><a href="#">Awards & Recognition
+              </a></li>
+          </ul>
+        </li>
         <li><a href="service.html">Services</a>
         </li>
         <li><a href="blog.html">Blogs</a>
@@ -513,58 +613,101 @@
   </section>
 
 
-  <!-- ======= Our Designs ======= -->
-<section class="section py-5" style="background:#f9fafc;">
-  <div class="container">
-    <h2 class="text-center mb-4 fw-bold" style="color:#333;">Our Gallery</h2>
 
-    <!-- Tabs -->
-    <ul class="nav nav-tabs justify-content-center border-0 mb-4" id="myTab" role="tablist">
-      <li class="nav-item mx-2" role="presentation">
-        <button class="nav-link active px-4 py-2 rounded-pill shadow-sm" id="home-tab" 
-          data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" 
-          aria-controls="home-tab-pane" aria-selected="true">
-          Home
-        </button>
-      </li>
-      <li class="nav-item mx-2" role="presentation">
-        <button class="nav-link px-4 py-2 rounded-pill shadow-sm" id="profile-tab" 
-          data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" 
-          aria-controls="profile-tab-pane" aria-selected="false">
-          Profile
-        </button>
-      </li>
-      <li class="nav-item mx-2" role="presentation">
-        <button class="nav-link px-4 py-2 rounded-pill shadow-sm" id="contact-tab" 
-          data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" 
-          aria-controls="contact-tab-pane" aria-selected="false">
-          Contact
-        </button>
-      </li>
-    </ul>
 
-    <!-- Tab Content -->
-    <div class="tab-content text-center" id="myTabContent">
-      <!-- Home Tab -->
-      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPqdYHh6vUIJGDtvQOH320aVHVV28f7GeUQ&s" 
-             alt="Home Image" class="tab-img img-fluid rounded shadow-lg animate-img">
-      </div>
 
-      <!-- Profile Tab -->
-      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPqdYHh6vUIJGDtvQOH320aVHVV28f7GeUQ&s" 
-             alt="Profile Image" class="tab-img img-fluid rounded shadow-lg animate-img">
-      </div>
-
-      <!-- Contact Tab -->
-      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPqdYHh6vUIJGDtvQOH320aVHVV28f7GeUQ&s" 
-             alt="Contact Image" class="tab-img img-fluid rounded shadow-lg animate-img">
-      </div>
+  <!-- <section class="carousel-wrapper" id="wrapper">
+  <div class="carousel-sticky" id="sticky">
+    <div class="carousel" id="carousel">
+      <div class="slide"><img src="assets/img/all-images/slider-1.jpg"></div>
+      <div class="slide"><img src="assets/img/all-images/slider-1.jpg"></div>
+      <div class="slide"><img src="assets/img/all-images/slider-1.jpg"></div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</section> -->
+<section class="premium-carousel" id="carousel-section">
+  <div class="carousel-track" id="carousel-track">
+    <div class="slide active">
+      <img src="assets/img/all-images/slider-1.jpg" alt="Design 1">
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide">
+      <img src="assets/img/all-images/slider-1.jpg" alt="Design 2">
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide">
+      <img src="assets/img/all-images/slider-1.jpg" alt="Design 3">
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide">
+      <img src="assets/img/all-images/slider-1.jpg" alt="Design 3">
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide">
+      <img src="assets/img/all-images/slider-1.jpg" alt="Design 3">
+      <div class="slide-overlay"></div>
     </div>
   </div>
+
+  <div class="dots-nav" id="dots-nav"></div>
 </section>
+
+
+
+
+  <!-- ======= Our Designs ======= -->
+  <section class="section py-5" style="background:#f9fafc;">
+    <div class="container">
+      <h2 class="text-center mb-4 fw-bold" style="color:#333;">Our Gallery</h2>
+
+      <!-- Tabs -->
+      <ul class="nav nav-tabs justify-content-center border-0 mb-4" id="myTab" role="tablist">
+        <li class="nav-item mx-2" role="presentation">
+          <button class="nav-link active px-4 py-2 rounded-pill shadow-sm" id="home-tab" data-bs-toggle="tab"
+            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+            Home
+          </button>
+        </li>
+        <li class="nav-item mx-2" role="presentation">
+          <button class="nav-link px-4 py-2 rounded-pill shadow-sm" id="profile-tab" data-bs-toggle="tab"
+            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+            aria-selected="false">
+            Profile
+          </button>
+        </li>
+        <li class="nav-item mx-2" role="presentation">
+          <button class="nav-link px-4 py-2 rounded-pill shadow-sm" id="contact-tab" data-bs-toggle="tab"
+            data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+            aria-selected="false">
+            Contact
+          </button>
+        </li>
+      </ul>
+
+      <!-- Tab Content -->
+      <div class="tab-content text-center" id="myTabContent">
+        <!-- Home Tab -->
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+          tabindex="0">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPqdYHh6vUIJGDtvQOH320aVHVV28f7GeUQ&s"
+            alt="Home Image" class="tab-img img-fluid rounded shadow-lg animate-img">
+        </div>
+
+        <!-- Profile Tab -->
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPqdYHh6vUIJGDtvQOH320aVHVV28f7GeUQ&s"
+            alt="Profile Image" class="tab-img img-fluid rounded shadow-lg animate-img">
+        </div>
+
+        <!-- Contact Tab -->
+        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKPqdYHh6vUIJGDtvQOH320aVHVV28f7GeUQ&s"
+            alt="Contact Image" class="tab-img img-fluid rounded shadow-lg animate-img">
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ======= Our Designs ======= -->
 
@@ -640,15 +783,15 @@
     </div>
   </section> -->
   <!-- =======  Performance Marketing ======= -->
-<!-- reel -->
- <section class="section">
+  <!-- reel -->
+  <section class="section">
     <div class="container">
       reels
-      </div>
-      </section>
+    </div>
+  </section>
 
 
-<!-- reel -->
+  <!-- reel -->
   <!-- ======= Portfolio ======= -->
   <section id="portfolio" class="section soft-bg">
     <div class="container">
@@ -823,14 +966,14 @@
 
 
   <!-- Some of OurClients -->
- <section class="section">
+  <section class="section">
     <div class="container">
       Some of OurClients
-      </div>
-      </section>
+    </div>
+  </section>
 
 
-<!-- Some of OurClients -->
+  <!-- Some of OurClients -->
   <!-- ======= Dark CTA ======= -->
   <section class="section">
     <div class="container">
@@ -1082,10 +1225,13 @@
               <img src="assets/img/all-images/digital_1.png" alt="" width="150px" height="150px">
               <p>Go First Digital is the best marketing Solution For your business. Connect Us for More Info.</p>
               <ul>
- <li><a href="#"><img src="assets/img/icons/facebook.png" alt="" width="20px" height="20px"></a></li>
-                <li><a href="https://wa.me/9638092181"><img src="assets/img/icons/whatsapp.png" alt="" width="20px" height="20px"></a></li>
-                <li><a href="https://www.linkedin.com/company/go-first-digital-marketing-agency-surat-adajan-vesu/"><img src="assets/img/icons/linkedin.png" alt="" width="20px" height="20px"></a></li>
-                <li><a href="https://www.instagram.com/gofirstdigital.in?igsh=MWh0OGJvYTl0ZzRyYQ=="><img src="assets/img/icons/instagram.png" alt="" width="20px" height="20px"></a></li>
+                <li><a href="#"><img src="assets/img/icons/facebook.png" alt="" width="20px" height="20px"></a></li>
+                <li><a href="https://wa.me/9638092181"><img src="assets/img/icons/whatsapp.png" alt="" width="20px"
+                      height="20px"></a></li>
+                <li><a href="https://www.linkedin.com/company/go-first-digital-marketing-agency-surat-adajan-vesu/"><img
+                      src="assets/img/icons/linkedin.png" alt="" width="20px" height="20px"></a></li>
+                <li><a href="https://www.instagram.com/gofirstdigital.in?igsh=MWh0OGJvYTl0ZzRyYQ=="><img
+                      src="assets/img/icons/instagram.png" alt="" width="20px" height="20px"></a></li>
               </ul>
             </div>
           </div>
@@ -1174,7 +1320,7 @@
   <script src="assets/js/plugins/slick-slider.js"></script>
   <script src="assets/js/plugins/circle-progress.js"></script>
   <script src="assets/js/main.js"></script>
-      <script>
+  <script>
     const colors = ["#FFFFFF", "#57c2b263"]; // white + dark 
     document.addEventListener("mousemove", (e) => {
       for (let i = 0; i < 5; i++) {   // multiple bubbles per move
@@ -1204,6 +1350,87 @@
       }
     });
   </script>
+
+  <script>
+const track = document.getElementById("carousel-track");
+const slides = document.querySelectorAll(".slide");
+const dotsNav = document.getElementById("dots-nav");
+
+let currentIdx = 0;
+let isAnimating = false;
+const totalSlides = slides.length;
+
+// Generate Dots
+slides.forEach((_, i) => {
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+  if (i === 0) dot.classList.add("active");
+  dot.addEventListener("click", () => moveSlide(i));
+  dotsNav.appendChild(dot);
+});
+
+function updateClasses() {
+  // Update Dots
+  document.querySelectorAll(".dot").forEach((dot, i) => {
+    dot.classList.toggle("active", i === currentIdx);
+  });
+  // Update Slide Animation (Zoom Effect)
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === currentIdx);
+  });
+}
+
+function moveSlide(index) {
+  if (isAnimating) return;
+  isAnimating = true;
+  currentIdx = index;
+
+  track.style.transform = `translateY(-${currentIdx * 100}vh)`;
+  updateClasses();
+
+  // 1.2s locking period to match CSS transition
+  setTimeout(() => {
+    isAnimating = false;
+  }, 1200);
+}
+const carouselSection = document.getElementById("carousel-section");
+
+window.addEventListener("wheel", (e) => {
+  const rect = carouselSection.getBoundingClientRect();
+  const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+
+  if (!isInView) return;
+
+  const scrollingDown = e.deltaY > 0;
+  const scrollingUp = e.deltaY < 0;
+
+  const atFirst = currentIdx === 0;
+  const atLast = currentIdx === totalSlides - 1;
+
+  // 🚨 LOCK scroll ONLY when sliding is possible
+  if (
+    (scrollingDown && !atLast) ||
+    (scrollingUp && !atFirst)
+  ) {
+    e.preventDefault();
+
+    if (isAnimating) return;
+    if (Math.abs(e.deltaY) < 50) return;
+
+    if (scrollingDown) {
+      moveSlide(currentIdx + 1);
+    } else {
+      moveSlide(currentIdx - 1);
+    }
+  }
+
+  // ✅ ELSE → allow normal page scroll (no preventDefault)
+}, { passive: false });
+// Strict Wheel Listener
+
+  </script>
+
+
 </body>
 
 </html>
