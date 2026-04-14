@@ -3039,7 +3039,7 @@ Location:
   padding: 0 20px;
 }
 .about1-section-area .about-content-area .arrow-circle {
-  background: #E4E0F9;
+  background: #daf1ee;
   border-radius: 50%;
   display: inline-block;
   padding: 10px;
@@ -27760,7 +27760,7 @@ Location:
 .slider-section-area {
   position: relative;
   /* z-index: 1; */
-  background: var(--ztc-bg-bg-4);
+  background: #daf1ee;
 }
 .slider-section-area .sldier-head p {
   font-family: var(--ztc-family-font1);
