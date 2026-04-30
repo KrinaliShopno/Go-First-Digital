@@ -81,8 +81,9 @@
                     </ul>
                   </li>
                   <!-- <li><a href="blog.html">Blogs </a></li> -->
+                     
                   <li><a href="portfolio.html">Portfolio </a></li>
-                   <li><a href="gallery.html">Gallery </a></li>
+                  <li><a href="gallery.html">Gallery </a></li>
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
@@ -141,13 +142,31 @@
     <div class="mobile-nav mobile-nav1">
       <ul class="mobile-nav-list nav-list1">
         <li><a href="/index.html">Home </a>
-
+          <!-- <ul class="sub-menu">
+          <li>
+            <a href="#">Multiple Page</a>
+            <ul class="sub-menu">
+              <li><a href="index.html">Home One</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Landing Page</a>
+            <ul class="sub-menu">
+              <li><a href="single-index1.html" target="_blank">Home One</a></li>
+            </ul>
+          </li>
+        </ul> -->
         </li>
                 <li><a href="about.html">About </a>
+                    <!-- <ul class="dropdown-padding">
+                          
+               <li><a href="#">Awards & Recognition
+                        </a></li>
                    
+                    </ul> -->
                   </li>
         <li><a href="service.html">Services</a>
-             <ul class="dropdown-padding">
+           <ul class="dropdown-padding">
                       <li><a href="#">Social Media Marketing</a></li>
                       <li><a href="#">Website Development</a></li>
                       <li><a href="#">Content Creation</a></li>
@@ -159,8 +178,8 @@
         </li>
         <li><a href="blog.html">Blogs</a>
         </li>
-         <li><a href="gallery.html">Gallery </a></li>
         <li><a href="portfolio.html">Portfolio </a></li>
+          <li><a href="gallery.html">Gallery </a></li>
         <li><a href="testimonials.html">Testimonials </a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
@@ -228,80 +247,84 @@
     <img src="assets/img/icons/star.png" alt="" class="star2 keyframe5" width="40px" height="40px">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 m-auto">
+            <div class="col-lg-3 m-auto">
                 <div class="about-inner-header heading9 text-center">
-                    <h1> Privacy Policy </h1>
-                    <a href="index.html">Home <i class="fa-solid fa-angle-right"></i> <span>Privacy Policy</span></a>
+                    <h1>Gallery</h1>
+                    <a href="index.html">Home <i class="fa-solid fa-angle-right"></i> <span>Gallery</span></a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!--===== HERO AREA ENDS =======-->
+ <div class="container">
+<div class="fd-wrap sp5 ">
 
-<section class="policy-section">
-  <div class="container">
 
-    <div class="policy-box">
-      <h2>Privacy Policy</h2>
-      <!-- <p><strong>Effective Date:</strong> [Add Date]</p> -->
-
-      <p>
-        At Go First Digital, we are committed to protecting your privacy and ensuring your data is handled securely.
-      </p>
-
-      <h3>1. Information We Collect</h3>
-      <ul class="policy-list">
-        <li>Full Name, Email Address, Phone Number</li>
-        <li>Business details (if provided)</li>
-        <li>Messages and inquiries</li>
-        <li>IP address, browser, and device data</li>
-      </ul>
-
-      <h3>2. How We Use Your Information</h3>
-      <ul class="policy-list">
-        <li>Respond to your inquiries</li>
-        <li>Provide digital marketing services</li>
-        <li>Improve website performance</li>
-        <li>Analyze usage and trends</li>
-      </ul>
-
-      <h3>3. Data Sharing</h3>
-      <p>
-        We do not sell your personal data. We may share it with trusted platforms like Google, Meta, and hosting providers.
-      </p>
-
-      <h3>4. Cookies</h3>
-      <p>
-        Cookies help us improve your browsing experience and analyze traffic.
-      </p>
-
-      <h3>5. Data Security</h3>
-      <p>
-        We implement strong security measures, but no system is 100% secure.
-      </p>
-
-      <h3>6. Your Rights</h3>
-      <ul class="policy-list">
-        <li>Access your data</li>
-        <li>Request corrections</li>
-        <li>Request deletion</li>
-      </ul>
-
-      <h3>7. Contact Us</h3>
-      <p >
-        <ul class="policy-list">
-       <li>Email: digitalgofirst@gmail.com </li> 
-         <li>Phone: +91 9638092181 </li>
-         <li>Location: 2055, 2nd Floor , Vanaziano complex, Udhana-Magdalla
-                  road, Vesu Surat-395007</li>
-                  </ul>
-      </p>
-
-    </div>
-
+  <div class="fd-filters" id="filters">
+    <button class="fd-f on" onclick="fil('all',this)">All Photos</button>
+    <button class="fd-f" onclick="fil('awards',this)">Awards</button>
+    <button class="fd-f" onclick="fil('speaking',this)">Speaking</button>
+    <button class="fd-f" onclick="fil('team',this)">Team</button>
+    <button class="fd-f" onclick="fil('networking',this)">Networking</button>
   </div>
-</section>
 
+  <!-- <div class="fd-countbar">
+    <span class="fd-count-txt">Showing <b id="visCount">8</b> photos</span>
+  </div> -->
+
+  <div class="fd-gallery" id="gal">
+    <div class="fd-cell big" data-cat="speaking" data-title="Keynote Speaker – BNI Event" data-desc="Prakash Parghi delivering an inspiring session to BNI Greater Surat members" onclick="openLb(0)">
+      <img src="assets/img/all-images/Screenshot_20260428_123643_Instagram.jpg.jpeg" alt="Speaking">
+      <div class="h"><div><span class="fd-tag">Networking</span><div class="fd-label">Keynote at BNI Event</div></div></div>
+    </div>
+    <div class="fd-cell" data-cat="awards" data-title="Best Referral Award – BNI Arjun" data-desc="Recognized as the Best Referral Giver at BNI Arjun Chapter, Greater Surat" onclick="openLb(1)">
+      <img src="assets/img/all-images/Screenshot_20260428_123654_Instagram.jpg.jpeg" alt="Award">
+      <div class="h"><div><span class="fd-tag">Award</span><div class="fd-label">Best Referral – BNI Arjun</div></div></div>
+    </div>
+    <div class="fd-cell" data-cat="team" data-title="Chapter Award Winners" data-desc="Celebrating with fellow BNI Arjun chapter award winners" onclick="openLb(2)">
+      <img src="assets/img/all-images/Screenshot_20260428_123758_Instagram.jpg.jpeg" alt="Team">
+      <div class="h"><div><span class="fd-tag">Team</span><div class="fd-label">Chapter Award Winners</div></div></div>
+    </div>
+    <div class="fd-cell tall" data-cat="awards" data-title="Sales Winner Trophy" data-desc="Receiving the Sales Winner recognition at BNI Greater Surat Annual Event" onclick="openLb(3)">
+      <img src="assets/img/all-images/Screenshot_20260428_123814_Instagram.jpg.jpeg" alt="Trophy">
+      <div class="h"><div><span class="fd-tag">Speaking</span><div class="fd-label">Sales Winner Trophy</div></div></div>
+    </div>
+    <div class="fd-cell" data-cat="networking" data-title="Prize Ceremony" data-desc="Receiving recognition and appreciation at BNI networking event" onclick="openLb(4)">
+      <img src="assets/img/all-images/Screenshot_20260428_123834_Instagram.jpg.jpeg" alt="Networking">
+      <div class="h"><div><span class="fd-tag">Networking</span><div class="fd-label">Prize Ceremony</div></div></div>
+    </div>
+    <div class="fd-cell" data-cat="awards" data-title="Social Media Amplifier of the Month" data-desc="BNI Greater Surat Rotating Trophy – Social Media Amplifier, July 2025" onclick="openLb(5)">
+      <img src="assets/img/all-images/Screenshot_20260428_123848_Instagram.jpg.jpeg" alt="Social Award">
+      <div class="h"><div><span class="fd-tag">Award</span><div class="fd-label">Social Media Amplifier</div></div></div>
+    </div>
+    <div class="fd-cell" data-cat="networking" data-title="Prize Handover" data-desc="Presenting prize to a fellow BNI member at the monthly chapter meeting" onclick="openLb(6)">
+      <img src="assets/img/all-images/Screenshot_20260428_123901_Instagram.jpg.jpeg" alt="Prize">
+      <div class="h"><div><span class="fd-tag">Award</span><div class="fd-label">Prize Handover</div></div></div>
+    </div>
+    <!-- <div class="fd-cell" data-cat="awards" data-title="Top Contributor Award" data-desc="Presenting the BNI Arjun Top Contributor award at the chapter meeting" onclick="openLb(7)">
+      <img src="assets/img/all-images/Screenshot_20260428_123643_Instagram.jpg.jpeg" alt="Contributor">
+      <div class="h"><div><span class="fd-tag">Award</span><div class="fd-label">Top Contributor</div></div></div>
+    </div> -->
+  </div>
+</div>
+
+<div class="lb" id="lb" onclick="maybeClose(event)">
+  <div class="lb-box">
+    <button class="lb-close" onclick="closeLb()">&#10005;</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lb-nav">
+      <button onclick="moveLb(-1)">&#8592; Prev</button>
+      <div class="lb-info">
+        <div class="lb-title" id="lb-title"></div>
+        <div class="lb-desc" id="lb-desc"></div>
+        <div class="lb-counter" id="lb-cnt"></div>
+      </div>
+      <button onclick="moveLb(1)">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+</div>
     <!--===== FOOTER AREA STARTS =======-->
     <div class="footer1-section-area">
       <div class="container">
@@ -327,8 +350,8 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="blog.html">Our Blog</a></li>
                 <li><a href="service.html">Services</a>
-                 </li>
-                  <li><a href="gallery.html">Gallery </a></li>
+                </li>
+                <li><a href="gallery.html">Gallery </a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
@@ -403,7 +426,76 @@
 <script src="assets/js/plugins/slick-slider.js"></script>
 <script src="assets/js/plugins/circle-progress.js"></script>
 <script src="assets/js/main.js"></script>
+  <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+var allItems = Array.from(document.querySelectorAll('.fd-cell'));
+var curCat = 'all';
+var visible = [];
+var lbIdx = 0;
+
+function fil(cat, btn) {
+  document.querySelectorAll('.fd-f').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  curCat = cat;
+  visible = [];
+  allItems.forEach((el, i) => {
+    var show = cat === 'all' || el.dataset.cat === cat;
+    el.style.display = show ? '' : 'none';
+    if(show) visible.push(i);
+  });
+  document.getElementById('visCount').textContent = visible.length;
+  resetLayout(cat);
+}
+
+function resetLayout(cat) {
+  allItems.forEach(el => {
+    el.classList.remove('big','tall');
+  });
+  var vis = allItems.filter(el => el.style.display !== 'none');
+  if(vis.length > 0) vis[0].classList.add('big');
+  if(vis.length > 3) vis[3].classList.add('tall');
+}
+
+function openLb(idx) {
+  lbIdx = idx;
+  setLb(idx);
+  document.getElementById('lb').classList.add('show');
+}
+
+function setLb(idx) {
+  var el = allItems[idx];
+  document.getElementById('lb-img').src = el.querySelector('img').src;
+  document.getElementById('lb-title').textContent = el.dataset.title;
+  document.getElementById('lb-desc').textContent = el.dataset.desc;
+  document.getElementById('lb-cnt').textContent = (idx+1) + ' / ' + allItems.length;
+}
+
+function moveLb(dir) {
+  lbIdx = (lbIdx + dir + allItems.length) % allItems.length;
+  setLb(lbIdx);
+}
+
+function closeLb() {
+  document.getElementById('lb').classList.remove('show');
+}
+
+function maybeClose(e) {
+  if(e.target === document.getElementById('lb')) closeLb();
+}
+
+document.addEventListener('keydown', function(e) {
+  if(!document.getElementById('lb').classList.contains('show')) return;
+  if(e.key === 'Escape') closeLb();
+  if(e.key === 'ArrowLeft') moveLb(-1);
+  if(e.key === 'ArrowRight') moveLb(1);
+});
+
+visible = allItems.map((_,i)=>i);
+</script>
 </body>
 
 <!-- Mirrored from seoc-html-v2.vercel.app/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 May 2025 03:50:28 GMT -->

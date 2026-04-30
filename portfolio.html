@@ -338,8 +338,10 @@
                       <li><a href="#">SEO</a></li>
                     </ul>
                   </li>
+                  
                   <!-- <li><a href="blog.html">Blogs </a></li> -->
                   <li><a href="portfolio.html">Portfolio </a></li>
+                   <li><a href="gallery.html">Gallery </a></li>
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
@@ -429,6 +431,7 @@
         </li>
         <li><a href="blog.html">Blogs</a>
         </li>
+         <li><a href="gallery.html">Gallery </a></li>
         <li><a href="portfolio.html">Portfolio </a></li>
         <li><a href="testimonials.html">Testimonials </a></li>
         <li><a href="contact.html">Contact Us</a></li>
@@ -629,7 +632,7 @@
     <div class="dots" id="dots"></div>
   </div>
 </section> -->
-<section class="premium-carousel" id="carousel-section">
+<!-- <section class="premium-carousel" id="carousel-section">
   <div class="carousel-track" id="carousel-track">
     <div class="slide active">
       <img src="assets/img/all-images/protfolio-1.jpeg" alt="Design 1">
@@ -647,15 +650,47 @@
       <img src="assets/img/all-images/protfolio-4.jpeg" alt="Design 3">
       <div class="slide-overlay"></div>
     </div>
-    <!-- <div class="slide">
-      <img src="assets/img/all-images/slider-1.jpg" alt="Design 3">
-      <div class="slide-overlay"></div>
-    </div> -->
+
   </div>
 
   <div class="dots-nav" id="dots-nav"></div>
-</section>
+</section> -->
+<section class="our-designs" id="our-designs">
+<div class="text-center mb-2">
+        <h1 class="fw-bold mb-2">My Work</h3>
 
+      </div>
+  <div class="ds-overflow">
+    <div class="ds-track" id="dsTrack">
+
+      <!-- SLIDE 1 — pehli 10 images -->
+      <div class="ds-slide">
+        <div class="ds-card"><img src="assets/img/all-images/gallery1.jpeg" alt=""></div>
+        <div class="ds-card"><img src="assets/img/all-images/gallery2.jpeg" alt=""></div>
+        <div class="ds-card"><img src="assets/img/all-images/gallery3.jpeg" alt=""></div>
+
+      </div>
+
+      <!-- SLIDE 2 — biji 10 images -->
+      <div class="ds-slide">
+        <div class="ds-card"><img src="assets/img/all-images/gallery4.jpeg" alt=""></div>
+        <div class="ds-card"><img src="assets/img/all-images/gallery5.jpeg" alt=""></div>
+        <div class="ds-card"><img src="assets/img/all-images/gallery6.jpeg" alt=""></div>
+
+      </div>
+
+    
+    </div>
+  </div>
+
+  <!-- Right side vertical dots -->
+  <div class="ds-dots" id="dsDots">
+    <button class="ds-dot active" data-i="0"></button>
+    <button class="ds-dot" data-i="1"></button>
+    <!-- <button class="ds-dot" data-i="2"></button> -->
+  </div>
+
+</section>
 
 
 
@@ -1248,6 +1283,7 @@
                 <li><a href="blog.html">Our Blog</a></li>
                 <li><a href="service.html">Services</a>
                 </li>
+                 <li><a href="gallery.html">Gallery </a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
@@ -1355,7 +1391,7 @@
     });
   </script>
 
-  <script>
+  <!-- <script>
 const track = document.getElementById("carousel-track");
 const slides = document.querySelectorAll(".slide");
 const dotsNav = document.getElementById("dots-nav");
@@ -1432,8 +1468,57 @@ window.addEventListener("wheel", (e) => {
 }, { passive: false });
 // Strict Wheel Listener
 
-  </script>
+  </script> -->
+<script>
+ const dsSection = document.getElementById('our-designs'); // taro section id
+const dsTrack = document.getElementById('dsTrack');
+const dsDots = document.querySelectorAll('.ds-dot');
+const SLIDE_HEIGHT = dsSection.offsetHeight; // auto height lese
+const total = dsDots.length;
+let cur = 0, busy = false;
 
+function goTo(i) {
+  if (i < 0 || i >= total) return;
+  cur = i;
+  dsTrack.style.transform = `translateY(-${cur * SLIDE_HEIGHT}px)`;
+  dsDots.forEach((d, idx) => d.classList.toggle('active', idx === cur));
+  busy = true;
+  setTimeout(() => busy = false, 900);
+}
+
+dsDots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.i)));
+
+// ✅ Scroll = slide change
+dsSection.addEventListener('wheel', e => {
+  const down = e.deltaY > 0;
+  const up = e.deltaY < 0;
+  const atFirst = cur === 0;
+  const atLast = cur === total - 1;
+
+  if ((down && !atLast) || (up && !atFirst)) {
+    e.preventDefault();
+    if (busy || Math.abs(e.deltaY) < 30) return;
+    goTo(down ? cur + 1 : cur - 1);
+  }
+}, { passive: false });
+
+// Touch support
+let ty = 0;
+dsSection.addEventListener('touchstart', e => ty = e.touches[0].clientY);
+dsSection.addEventListener('touchend', e => {
+  const diff = ty - e.changedTouches[0].clientY;
+  if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
+});
+function goTo(i) {
+  if (i < 0 || i >= total) return;
+  cur = i;
+  const h = document.getElementById('our-designs').offsetHeight;  // ← dynamic
+  dsTrack.style.transform = `translateY(-${cur * h}px)`;
+  dsDots.forEach((d, idx) => d.classList.toggle('active', idx === cur));
+  busy = true;
+  setTimeout(() => busy = false, 900);
+}
+</script>
 
 </body>
 
